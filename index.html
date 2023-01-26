@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pot-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Checagem</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <style>
+        
+        body{
+            background-color: #303030;
+            color: white;
+            font-family: 'Inter', sans-serif;
+            padding: 50PX;
+
+        }
+
+        #resultado {
+            display: none;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <center>
+    <navbar>
+        <img src="jim2.gif" alt="">
+        <h1>Identificando teclas com o <strong>addEventListener</strong></h1>
+    </navbar>
+
+    <div id="resultado">
+        <h2 id="tecla"></h3>
+        <h2 id="cod" ></h3>
+    </div>
+
+      
+
+   <script>
+        function checkKeyboardCode (){
+            document.addEventListener ('keydown', (event) => {
+                var name = event.key;
+                var code = event.code;
+                
+                document.querySelector("#resultado").style.display = 'block';
+                document.getElementById('tecla').innerHTML = `A tecla pressionada foi <strong>"${name}"</strong>`
+                    document.getElementById('cod').innerHTML = `O código para essa tecla no addEventListener é <strong>"${code}" </strong>`
+            
+            }, false);
+        }
+
+        checkKeyboardCode()
+
+   </script>
+
+   </center>
+</body>
+</html>
